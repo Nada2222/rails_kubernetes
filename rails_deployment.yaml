@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: current-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: railsapp
+    spec:
+      containers:
+      - name: railsapp
+        image: nadamohamed2222/ru:v1
+        ports:
+        - containerPort: 3000
+
